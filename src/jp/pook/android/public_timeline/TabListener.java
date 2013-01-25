@@ -1,7 +1,6 @@
 package jp.pook.android.public_timeline;
 
 import jp.pook.android.R;
-import jp.pook.android.R.id;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;

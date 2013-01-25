@@ -1,7 +1,7 @@
 package jp.pook.android;
 
-import jp.pook.android.public_timeline.CheckFragment;
-import jp.pook.android.public_timeline.PublicTimelineFragment;
+import jp.pook.android.public_timeline.PublicTimelineGridFragment;
+import jp.pook.android.public_timeline.PublicTimelineListFragment;
 import jp.pook.android.public_timeline.TabListener;
 import android.app.ActionBar;
 import android.app.Activity;
@@ -22,14 +22,14 @@ public class MainActivity extends Activity {
 				.newTab()
 				.setText(R.string.tab_public_timeline)
 				.setTabListener(
-						new TabListener<PublicTimelineFragment>(this, "tabA",
-								PublicTimelineFragment.class)));
+						new TabListener<PublicTimelineListFragment>(this, "tabA",
+								PublicTimelineListFragment.class)));
 		actionBar.addTab(actionBar
 				.newTab()
 				.setText(R.string.tab_check)
 				.setTabListener(
-						new TabListener<CheckFragment>(this, "tagB",
-								CheckFragment.class)));
+						new TabListener<PublicTimelineGridFragment>(this, "tagB",
+								PublicTimelineGridFragment.class)));
 
 	}
 }
