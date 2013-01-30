@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Pook for Android</string>
-    
     <string name="tab_public_timeline">タイムライン</string>
     <string name="tab_requotes">リクォート</string>
     <string name="menu_login">ログインする</string>
     <string name="menu_new_account">アカウント作成</string>
     <string name="menu_search">検索</string>
+    <string name="toast_no_barcode_app">バーコードアプリをインストールしてください</string>
+
 </resources>
