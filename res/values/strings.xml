@@ -3,5 +3,5 @@
     <string name="app_name">Pook for Android</string>
     
     <string name="tab_public_timeline">タイムライン</string>
-    <string name="tab_check">チェック</string>
+    <string name="tab_requotes">リクォート</string>
 </resources>

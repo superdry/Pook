@@ -1,12 +1,13 @@
 package jp.pook.android.public_timeline;
 
+import java.util.List;
+
 import jp.pook.android.R;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 
 public class PublicTimelineListFragment extends PublicTimelineFragment {
 
@@ -22,10 +23,10 @@ public class PublicTimelineListFragment extends PublicTimelineFragment {
 	public void setAdapter(String json) {
 
 		// アダプタを作成
-		SimpleAdapter adapter = new SimpleAdapter(this.getActivity(),
-				super.parseJson(json), android.R.layout.simple_list_item_2,
-				new String[] { "content", "book_name" }, new int[] {
-						android.R.id.text1, android.R.id.text2 });
+		List<QuoteData> quotes = parseJson(json);
+		QuoteAdapter adapter = new QuoteAdapter(this.getActivity(),
+				R.layout.list, quotes);
+
 		// アダプタを設定
 		ListView listView = (ListView) this.getActivity().findViewById(
 				R.id.listView);

@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 								PublicTimelineListFragment.class)));
 		actionBar.addTab(actionBar
 				.newTab()
-				.setText(R.string.tab_check)
+				.setText(R.string.tab_requotes)
 				.setTabListener(
 						new TabListener<PublicTimelineGridFragment>(this, "tagB",
 								PublicTimelineGridFragment.class)));

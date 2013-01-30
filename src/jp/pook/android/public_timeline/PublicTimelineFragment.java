@@ -1,7 +1,6 @@
 package jp.pook.android.public_timeline;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -26,9 +25,9 @@ public abstract class PublicTimelineFragment extends Fragment {
 	
     abstract void setAdapter(String json);
 	
-	protected ArrayList<HashMap<String, String>> parseJson(String json) {
+	protected ArrayList<QuoteData> parseJson(String json) {
 
-		ArrayList<HashMap<String, String>> result = new ArrayList<HashMap<String, String>>();
+		ArrayList<QuoteData> result = new ArrayList<QuoteData>();
 
 		try {
 			// オブジェクトの生成
@@ -42,11 +41,13 @@ public abstract class PublicTimelineFragment extends Fragment {
 				JSONObject book_user = quote.getJSONObject("book_user");
 				String book_name = book_user.getString("name");
 				String image_url = book_user.getString("image_url");
-				HashMap<String, String> map = new HashMap<String, String>();
-				map.put("content", content);
-				map.put("book_name", book_name);
-				map.put("image_url", image_url);
-				result.add(map);
+				String isbn = book_user.getString("username");
+				QuoteData data = new QuoteData();
+				data.setBookName(book_name);
+				data.setQuote(content);
+				data.setImageUrl(image_url);
+				data.setIsbn(isbn);
+				result.add(data);
 			}
 
 		} catch (JSONException e) {
