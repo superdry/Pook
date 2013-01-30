@@ -4,4 +4,7 @@
     
     <string name="tab_public_timeline">タイムライン</string>
     <string name="tab_requotes">リクォート</string>
+    <string name="menu_login">ログインする</string>
+    <string name="menu_new_account">アカウント作成</string>
+    <string name="menu_search">検索</string>
 </resources>
